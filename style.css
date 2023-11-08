@@ -1,6 +1,13 @@
 *{
     margin: 0;
 }
+html, body{
+    min-height: 100vh;
+}
+body{
+    display: grid;
+    place-content: center;
+}
 
 .wrapper{
     margin: 0 auto;
@@ -8,6 +15,7 @@
     height: 768px;
     border: 1px solid black;
     position: relative;
+    overflow: hidden;/* deze code zorgt ervoor dat alle content/ingredienten binnen het wrapper-blok blijven en nooit er uit steken */
 }
 
 .welkom{
