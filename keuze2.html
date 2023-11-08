@@ -1,34 +1,41 @@
 <!DOCTYPE html>
-<html>
+<html lang="nl">
 
 <head>
     <title>Foodcourt titel</title>
     <meta name="Author" content="Naam Student">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="jquery.js"></script>
 </head>
- 
+
 <body class="keuze2">
- 
+
     <div class="wrapper">
 
         <h1 class="intro">Kies uw tweede ingredient</h1>
-       
+
         <div class="cluster-ingredienten">
-            <div class="ingredient4">
-            <!-- plaats hier een ingredient.svg -->
-                <div class="prijs">+ € 1.50</div>
-            </div>
-            <div class="ingredient5">
-                <!-- plaats hier een ingredient.svg -->
-                <div class="prijs">+ € 1.50</div>
-            </div>
-            <div class="ingredient6">
-                <!-- plaats hier een ingredient.svg -->
-                <div class="prijs">+ € 1.50</div>
-            </div>
+            <label>
+                <div class="ingredient ingredient4">
+                    <input type="radio" name="ingredient">
+                    <!-- plaats hier een ingredient.svg -->
+                    <div class="prijs">+ € 1.50</div>
+                </div>
+            </label>
+            <label>
+                <div class="ingredient ingredient5">
+                    <input type="radio" name="ingredient">
+                    <!-- plaats hier een ingredient.svg -->
+                    <div class="prijs">+ € 1.50</div>
+                </div>
+            </label>
+            <label>
+                <div class="ingredient ingredient6">
+                    <input type="radio" name="ingredient">
+                    <!-- plaats hier een ingredient.svg -->
+                    <div class="prijs">+ € 1.50</div>
+                </div>
+            </label>
         </div>
 
 
@@ -38,9 +45,10 @@
                 onthouden van de vorige pagina. -->
         </div>
 
-        <a href="keuze1.html"><button class="vorige">Vorige ingredient</button></a>
-        <a href="keuze3.html"><button class="volgende">Volgende ingredient</button></a>
+        <a href="keuze1.html" class="vorige">Vorige ingredient</a>
+        <a href="keuze3.html" class="volgende">Volgende ingredient</a>
     </div>
 
 </body>
+
 </html>

@@ -38,8 +38,11 @@ body{
 
 .cluster-ingredienten{
     margin: 0 auto;
-    width: 1000px;
+    width: 100%;
     height: 200px;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
 }
 
 .cluster-ingredienten-eind{
@@ -47,15 +50,6 @@ body{
     float: left;
 }
 
-
-.bord{
-    width: 400px;
-    height: 40px;
-    margin:0 auto;
-    background-color: red;
-    position: relative;
-    transform: translate(0,400px);
-}
 
 .eindgerecht{
     width: 500px;
@@ -73,6 +67,7 @@ body{
     float: left;
 }
 
+/* BUTTONS VORIGE EN VOLGENDE */
 .volgende{
     background-color: green;
     color:white;
@@ -82,6 +77,8 @@ body{
     position: absolute;
     bottom:50px;
     right:50px;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 .vorige{
@@ -93,6 +90,8 @@ body{
     position: absolute;
     bottom:50px;
     left:50px;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 .prijs{
@@ -102,158 +101,94 @@ body{
     padding: 10px;
     background-color: gold;
 }
-/************************************************************* INGREDIENTEN in keuze paginba's en overzicht pagina*/
+.bord{
+    width: 400px;
+    height: 40px;
+    margin:0 auto;
+    background-color: red;
+    position: relative;
+    transform: translate(0,400px);
+    z-index: 1; /* deze code zorgt voor stapeling. Als de z-index van bord lager is dan van ingredient ligt het ingredient voor het bord. */
+}
+/************************************************************* INGREDIENTEN in keuze pagina's en overzicht pagina*/
+/* dit geldt voor alle ingredienten */
 .ingredient{
     width: 150px;
     height: 150px;
-    margin: 30px;
-    background-color: red;
-    position: relative;
-}
 
-.ingredient1{
-    width: 150px;
-    height: 150px;
-    background-color: red;
-    float: left;
-    margin:0 90px;
     position: relative;
+
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    z-index: 2; /* deze code zorgt voor stapeling. Als de z-index van bord lager is dan van ingredient ligt het ingredient voor het bord. */
+}
+/******** INGREDIENTEN OP PAGINA 1 */
+.ingredient1{
+    background-color: red;
 }
 
 .ingredient2{
-    width: 150px;
-    height: 150px;
     background-color: blue;
-    float: left;
-    margin:0 90px;
-    position: relative;
 }
 
 .ingredient3{
-    width: 150px;
-    height: 150px;
     background-color: green;
-    float: left;
-    margin:0 90px;
-    position: relative;
 }
-
+/******** INGREDIENTEN OP PAGINA 2 */
 .ingredient4{
-    width: 150px;
-    height: 150px;
     background-color: red;
-    float: left;
-    margin:0 90px;
-    position: relative;
 }
 
 .ingredient5{
-    width: 150px;
-    height: 150px;
     background-color: blue;
-    float: left;
-    margin:0 90px;
-    position: relative;
 }
 
 .ingredient6{
-    width: 150px;
-    height: 150px;
     background-color: green;
-    float: left;
-    margin:0 90px;
-    position: relative;
 }
-
+/******** INGREDIENTEN OP PAGINA 3 */
 .ingredient7{
-    width: 150px;
-    height: 150px;
     background-color: red;
-    float: left;
-    margin:0 90px;
-    position: relative;
 }
 
 .ingredient8{
-    width: 150px;
-    height: 150px;
     background-color: blue;
-    float: left;
-    margin:0 90px;
-    position: relative;
 }
 
 .ingredient9{
-    width: 150px;
-    height: 150px;
     background-color: green;
-    float: left;
-    margin:0 90px;
-    position: relative;
 }
-/************************************************************* ANIMATIES 
-Deze classes worden toegevoegd in jquery.js als er wordt geklikt op een ingredient in keuze1.html, keuze2.html en keuze3.html
+
+.ingredient-overzicht{
+    margin: 15px 30px;
+    background-color: red;
+}
+
+/*
+op de keuzepagina's staan ingredient divs
+in die divs zitten verborgen radio-buttons, zoals dat heet, dat zijn keuze mogelijkheden.
+Ze zijn verborgen omdat ze wel moeten werken maar niet te zien moeten zijn
+Zijn ze gekozen dan krijgen deze ingredienten een CSS-animatie
 */
-
-.ingredient1ani{
-    animation-name: ingredient1ani;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
+.ingredient input[type="radio"]{
+    display: none; /* hier wordt de radio-button verborgen. Zet je dit uit, dan zie je een keuzerondje */
 }
 
-.ingredient2ani{
-    animation-name: ingredient2ani;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
-}
-
-.ingredient3ani{
-    animation-name: ingredient3ani;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
-}
-
-.ingredient4ani{
-    animation-name: ingredient1ani;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
-}
-
-.ingredient5ani{
-    animation-name: ingredient2ani;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
-}
-
-.ingredient6ani{
-    animation-name: ingredient3ani;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
-}
-
-.ingredient7ani{
-    animation-name: ingredient1ani;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
-}
-
-.ingredient8ani{
-    animation-name: ingredient2ani;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
-}
-
-.ingredient9ani{
-    animation-name: ingredient3ani;
-    animation-duration: 1s;
-    animation-fill-mode: forwards;
-}
+.ingredient1:has(input[type="radio"]:checked){ animation-name: ingredient1ani; }
+.ingredient2:has(input[type="radio"]:checked){ animation-name: ingredient2ani; }
+.ingredient3:has(input[type="radio"]:checked){ animation-name: ingredient3ani; }
+.ingredient4:has(input[type="radio"]:checked){ animation-name: ingredient4ani; }
+.ingredient5:has(input[type="radio"]:checked){ animation-name: ingredient5ani; }
+.ingredient6:has(input[type="radio"]:checked){ animation-name: ingredient6ani; }
+.ingredient7:has(input[type="radio"]:checked){ animation-name: ingredient7ani; }
+.ingredient8:has(input[type="radio"]:checked){ animation-name: ingredient8ani; }
+.ingredient9:has(input[type="radio"]:checked){ animation-name: ingredient9ani; }
 
 /************************************************************* keyframe ANIMATIES */
 @keyframes ingredient1ani {
     0%{transform: translate(0,0);}
-    100%{transform: translate(400px,450px);}
-}
+    100%{transform: translate(341px,450px);}
+}   
 
 @keyframes ingredient2ani {
     0%{transform: translate(0,0);}
@@ -262,12 +197,12 @@ Deze classes worden toegevoegd in jquery.js als er wordt geklikt op een ingredie
 
 @keyframes ingredient3ani {
     0%{transform: translate(0,0);}
-    100%{transform: translate(-400px,450px);}
+    100%{transform: translate(-342px,450px);}
 }
 
 @keyframes ingredient4ani {
     0%{transform: translate(0,0);}
-    100%{transform: translate(400px,450px);}
+    100%{transform: translate(341px,450px);}
 }
 
 @keyframes ingredient5ani {
@@ -277,12 +212,12 @@ Deze classes worden toegevoegd in jquery.js als er wordt geklikt op een ingredie
 
 @keyframes ingredient6ani {
     0%{transform: translate(0,0);}
-    100%{transform: translate(-400px,450px);}
+    100%{transform: translate(-342px,450px);}
 }
 
 @keyframes ingredient7ani {
     0%{transform: translate(0,0);}
-    100%{transform: translate(400px,450px);}
+    100%{transform: translate(341px,450px);}
 }
 
 @keyframes ingredient8ani {
@@ -292,5 +227,5 @@ Deze classes worden toegevoegd in jquery.js als er wordt geklikt op een ingredie
 
 @keyframes ingredient9ani {
     0%{transform: translate(0,0);}
-    100%{transform: translate(-400px,450px);}
+    100%{transform: translate(-342px,450px);}
 }
