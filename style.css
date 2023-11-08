@@ -1,0 +1,288 @@
+*{
+    margin: 0;
+}
+
+.wrapper{
+    margin: 0 auto;
+    width: 1024px;
+    height: 768px;
+    border: 1px solid black;
+    position: relative;
+}
+
+.welkom{
+    background-color: beige;
+    text-align: center;
+    height: 20vh;
+    padding: 40vh 0;
+}
+
+.bedankt{
+    background-color: beige;
+    text-align: center;
+    height: 20vh;
+    padding: 40vh 0;
+}
+.intro{
+    text-align: center;
+    padding:30px;
+}
+
+.cluster-ingredienten{
+    margin: 0 auto;
+    width: 1000px;
+    height: 200px;
+}
+
+.cluster-ingredienten-eind{
+    width: 200px;
+    float: left;
+}
+
+
+.bord{
+    width: 400px;
+    height: 40px;
+    margin:0 auto;
+    background-color: red;
+    position: relative;
+    transform: translate(0,400px);
+}
+
+.eindgerecht{
+    width: 500px;
+    height: 512px;
+    margin: 27px;
+    background-color: gold;
+    float: left;
+}
+
+.eindprijs{
+    width: 200px;
+    height: 512px;
+    margin: 27px;
+    background-color: blue;
+    float: left;
+}
+
+.volgende{
+    background-color: green;
+    color:white;
+    font-size: 25px;
+    padding: 10px;
+    border-radius: 0 20px 20px 0;
+    position: absolute;
+    bottom:50px;
+    right:50px;
+}
+
+.vorige{
+    background-color: green;
+    color:white;
+    font-size: 25px;
+    padding: 10px;
+    border-radius: 20px 0 0 20px;
+    position: absolute;
+    bottom:50px;
+    left:50px;
+}
+
+.prijs{
+    position: absolute;
+    bottom:-20px;
+    right:-20px;
+    padding: 10px;
+    background-color: gold;
+}
+/************************************************************* INGREDIENTEN in keuze paginba's en overzicht pagina*/
+.ingredient{
+    width: 150px;
+    height: 150px;
+    margin: 30px;
+    background-color: red;
+    position: relative;
+}
+
+.ingredient1{
+    width: 150px;
+    height: 150px;
+    background-color: red;
+    float: left;
+    margin:0 90px;
+    position: relative;
+}
+
+.ingredient2{
+    width: 150px;
+    height: 150px;
+    background-color: blue;
+    float: left;
+    margin:0 90px;
+    position: relative;
+}
+
+.ingredient3{
+    width: 150px;
+    height: 150px;
+    background-color: green;
+    float: left;
+    margin:0 90px;
+    position: relative;
+}
+
+.ingredient4{
+    width: 150px;
+    height: 150px;
+    background-color: red;
+    float: left;
+    margin:0 90px;
+    position: relative;
+}
+
+.ingredient5{
+    width: 150px;
+    height: 150px;
+    background-color: blue;
+    float: left;
+    margin:0 90px;
+    position: relative;
+}
+
+.ingredient6{
+    width: 150px;
+    height: 150px;
+    background-color: green;
+    float: left;
+    margin:0 90px;
+    position: relative;
+}
+
+.ingredient7{
+    width: 150px;
+    height: 150px;
+    background-color: red;
+    float: left;
+    margin:0 90px;
+    position: relative;
+}
+
+.ingredient8{
+    width: 150px;
+    height: 150px;
+    background-color: blue;
+    float: left;
+    margin:0 90px;
+    position: relative;
+}
+
+.ingredient9{
+    width: 150px;
+    height: 150px;
+    background-color: green;
+    float: left;
+    margin:0 90px;
+    position: relative;
+}
+/************************************************************* ANIMATIES 
+Deze classes worden toegevoegd in jquery.js als er wordt geklikt op een ingredient in keuze1.html, keuze2.html en keuze3.html
+*/
+
+.ingredient1ani{
+    animation-name: ingredient1ani;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.ingredient2ani{
+    animation-name: ingredient2ani;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.ingredient3ani{
+    animation-name: ingredient3ani;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.ingredient4ani{
+    animation-name: ingredient1ani;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.ingredient5ani{
+    animation-name: ingredient2ani;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.ingredient6ani{
+    animation-name: ingredient3ani;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.ingredient7ani{
+    animation-name: ingredient1ani;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.ingredient8ani{
+    animation-name: ingredient2ani;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+.ingredient9ani{
+    animation-name: ingredient3ani;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+/************************************************************* keyframe ANIMATIES */
+@keyframes ingredient1ani {
+    0%{transform: translate(0,0);}
+    100%{transform: translate(400px,450px);}
+}
+
+@keyframes ingredient2ani {
+    0%{transform: translate(0,0);}
+    100%{transform: translate(0,450px);}
+}
+
+@keyframes ingredient3ani {
+    0%{transform: translate(0,0);}
+    100%{transform: translate(-400px,450px);}
+}
+
+@keyframes ingredient4ani {
+    0%{transform: translate(0,0);}
+    100%{transform: translate(400px,450px);}
+}
+
+@keyframes ingredient5ani {
+    0%{transform: translate(0,0);}
+    100%{transform: translate(0,450px);}
+}
+
+@keyframes ingredient6ani {
+    0%{transform: translate(0,0);}
+    100%{transform: translate(-400px,450px);}
+}
+
+@keyframes ingredient7ani {
+    0%{transform: translate(0,0);}
+    100%{transform: translate(400px,450px);}
+}
+
+@keyframes ingredient8ani {
+    0%{transform: translate(0,0);}
+    100%{transform: translate(0,450px);}
+}
+
+@keyframes ingredient9ani {
+    0%{transform: translate(0,0);}
+    100%{transform: translate(-400px,450px);}
+}
